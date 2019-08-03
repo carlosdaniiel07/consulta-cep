@@ -1,0 +1,70 @@
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title">Dados retornados</h5>
+
+        <!-- form -->
+        <form [formGroup]="form">
+            <div class="form-group">
+                <label>CEP</label>
+                <input type="text" class="form-control" formControlName="cep">
+            </div>
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label>Logradouro</label>
+                        <input type="text" class="form-control" formControlName="logradouro">
+                        <small class="form-text text-muted">Complemento: {{complemento.value}}</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label>Bairro</label>
+                        <input type="text" class="form-control" formControlName="bairro">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" class="form-control" formControlName="localidade">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>UF</label>
+                        <input type="text" class="form-control" formControlName="uf">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <input type="text" class="form-control" formControlName="unidade">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>IBGE</label>
+                        <input type="text" class="form-control" formControlName="ibge">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>GIA</label>
+                        <input type="text" class="form-control" formControlName="gia">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- /.form -->
+    </div>
+
+    <div class="card-footer text-muted">
+        Todos os dados aqui exibidos são retirados da API <a href="http://viacep.com.br/" target="_blank">ViaCEP</a>
+    </div>
+</div>
