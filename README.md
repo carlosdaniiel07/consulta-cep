@@ -9,3 +9,7 @@ A aplicação foi escrita na versão 8 do **Angular**. O Angular é um framework
 Outras dependências do projeto:
   - **SweetAlert2** - *para mensagens de alerta/erro customizadas*
   - **NgxMask** - *para aplicar máscaras aos campos dos formulários*
+
+## Live Demo
+
+O projeto está hospedado no Heroku e pode ser acessado através deste [link](https://consulta-cep-app.herokuapp.com/)
