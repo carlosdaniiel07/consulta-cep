@@ -1,27 +1,11 @@
 # ConsultaCep
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+A aplicação consiste em receber um CEP e retornar as suas informações através da API ViaCEP, tais como logradouro, cidade, estado etc. Este é um projeto somente para fins de aprendizagem. 
 
-## Development server
+## Tecnologias
+ 
+A aplicação foi escrita na versão 8 do **Angular**. O Angular é um framework front-end voltado para o desenvolvimento de interfaces web e para a criação de aplicativos de página única (SPA - Single Page Application). A escolha dessa tecnologia se deve inteiramente a facilidade proporcionada pela ferramenta, que transforma tarefas relativamente complicadas em poucas linhas de **Type Script**. Também foi usado o **Bootstrap** para construção da identidade visual do site. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Outras dependências do projeto:
+  - **SweetAlert2** - *para mensagens de alerta/erro customizadas*
+  - **NgxMask** - *para aplicar máscaras aos campos dos formulários*
