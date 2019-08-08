@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms'
 
 import { CepService } from './../cep.service'
@@ -12,6 +12,7 @@ import { Cep } from './../cep.model'
 export class CepCardComponent {
   form: FormGroup
   @Input() cepRecuperado: Cep
+  @Output() esconderCardEvent = new EventEmitter<boolean>();
 
   constructor(private fb: FormBuilder, private cepService: CepService) {
     this.initForm()
@@ -19,6 +20,10 @@ export class CepCardComponent {
 
   ngOnChanges(){
     this.loadForm(this.cepRecuperado)
+  }
+
+  esconderCard(): void {    
+    this.esconderCardEvent.emit(true)
   }
 
   initForm(): void {

@@ -40,6 +40,12 @@ export class AppComponent {
     }
   }
 
+  esconderCard(esconder: boolean): void {
+    if(esconder){      
+      this.cepRecuperado = null
+    }
+  }
+
   hasCep(): boolean {
     return this.cepRecuperado !== null
   }
