@@ -46,6 +46,7 @@ export class CepCardComponent {
     this.complemento.setValue(cep.complemento)
     this.bairro.setValue(cep.bairro)
     this.localidade.setValue(cep.localidade)
+    this.uf.setValue(cep.uf)
     this.unidade.setValue(cep.unidade)
     this.ibge.setValue(cep.ibge)
     this.gia.setValue(cep.gia)
@@ -56,6 +57,7 @@ export class CepCardComponent {
   get complemento() { return this.form.get('complemento') }
   get bairro() { return this.form.get('bairro') }
   get localidade() { return this.form.get('localidade') }
+  get uf() { return this.form.get('uf') }
   get unidade() { return this.form.get('unidade') }
   get ibge() { return this.form.get('ibge') }
   get gia() { return this.form.get('gia') }
