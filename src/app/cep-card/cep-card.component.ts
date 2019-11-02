@@ -40,6 +40,11 @@ export class CepCardComponent {
     })
   }
 
+  hasComplemento(): boolean {
+    let complemento: string = this.complemento.value
+    return complemento.trim().length > 0
+  }
+
   loadForm(cep: Cep): void {
     this.cep.setValue(cep.cep)
     this.logradouro.setValue(cep.logradouro)

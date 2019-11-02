@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label>Logradouro</label>
                         <input type="text" class="form-control" formControlName="logradouro">
-                        <small class="form-text text-muted">Complemento: {{complemento.value}}</small>
+                        <small *ngIf="hasComplemento()" class="form-text text-muted">Complemento: {{complemento.value}}</small>
                     </div>
                 </div>
             </div>
