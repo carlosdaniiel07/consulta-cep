@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/carlosdaniiel07/consulta-cep.svg?branch=master)](https://travis-ci.org/carlosdaniiel07/consulta-cep)
+
 # ConsultaCep
 
 A aplicação consiste em receber um CEP e retornar as suas informações através da API ViaCEP, tais como logradouro, cidade, estado etc. Este é um projeto somente para fins de aprendizagem. 
