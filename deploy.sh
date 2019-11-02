@@ -2,7 +2,7 @@
 set -e # termina o script com um código diferente de 0 se alguma coisa falhar
 
 # roda o script de build da nossa aplicação
-npm run build
+ng build --prod -base-href https://carlosdaniiel0711.github.io/${GH_REF}/
 
 # pull requests e commits para outras branches diferentes da master 
 # não devem fazer o deploy, isso é opcional caso queira deletar as próximas 6 linhas
@@ -22,7 +22,7 @@ git init
 # inside this git repo we'll pretend to be a new user
 # dentro desse repositório nós pretendemos ser um novo usuário
 git config user.name "Carlos Daniel Martins de Almeida"
-git config user.email "carlosdaniiel071@hotmail.com"
+git config user.email "carlosdaniiel0711@hotmail.com"
 
 # O primeiro e único commit do seu repositório terá
 # todos os arquivos presentes e a mensagem do commit será "Deploy to GitHub Pages"
