@@ -1,6 +1,7 @@
 <!-- alerta -->
 <ngb-alert [dismissible]="false" type="info">
-    <strong>Aviso!</strong> Este é um simples projeto open-source disponível no <a href="https://github.com/carlosdaniiel07/consulta-cep" target="_blank"><b>GitHub</b></a>
+    <strong>Aviso!</strong> Este é um simples projeto open-source disponível no <a
+        href="https://github.com/carlosdaniiel07/consulta-cep" target="_blank"><b>GitHub</b></a>
 </ngb-alert>
 <!-- /.alerta -->
 
@@ -11,28 +12,42 @@
         <div class="col-md-12">
             <form [formGroup]="form">
                 <div class="form-group">
-                    <input type="text" formControlName="cep" mask="00000-000" class="form-control" placeholder="Começe digitando um CEP válido!"/>
+                    <input type="text" formControlName="cep" mask="00000-000" class="form-control"
+                        placeholder="Começe digitando um CEP válido!" />
                     <small class="form-text text-danger" *ngIf="!cep.valid && cep.touched">
                         Preencha o CEP corretamente.
                     </small>
                 </div>
 
-                <button type="button" class="btn btn-primary" [disabled]="!form.valid" (click)="buscarCep()">
-                    <i class="fas fa-search"></i> Buscar
-                </button>
+                <div class="btn-group" role="group" aria-label="Exemplo básico">
+                    <button type="button" class="btn btn-primary" [disabled]="!form.valid" (click)="buscarCep()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                    <button type="button" class="btn btn-info" placement="bottom"
+                        ngbTooltip="Visualize o histórico de consultas" (click)="exibeHistorico()">
+                        <i class="fas fa-history"></i> Histórico
+                    </button>
+                    <button type="button" class="btn btn-danger" placement="right" (click)="limpaHistorico()">
+                        <i class="fas fa-trash"></i> Limpar histórico
+                    </button>
+                </div>
             </form>
         </div>
     </div>
     <!-- /.form -->
 
-    <br/>
+    <br />
 
     <!-- card -->
-    <app-cep-card 
-        *ngIf="hasCep()" 
-        [cepRecuperado]="cepRecuperado"
-        (esconderCardEvent)="esconderCard($event)"
-    ></app-cep-card>
+    <app-cep-card *ngIf="hasCep()" [cepRecuperado]="cepRecuperado" (esconderCardEvent)="esconderCard($event)">
+    </app-cep-card>
     <!-- /.card -->
+
+    <br />
+
+    <!-- historico-consulta -->
+    <app-historico-consultas [ngbCollapse]="!isHistoricoVisivel" [historico]="getHistoricoConsultas()"
+        (reproduzirConsultaEvent)="reproduzirConsulta($event)"></app-historico-consultas>
+    <!-- /.historico-consulta -->
 </div>
 <!-- /.container -->
