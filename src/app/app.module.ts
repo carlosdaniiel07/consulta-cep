@@ -13,11 +13,13 @@ import { CepService } from './cep.service'
 
 import { AppComponent } from './app.component';
 import { CepCardComponent } from './cep-card/cep-card.component';
+import { HistoricoConsultasComponent } from './historico-consultas/historico-consultas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CepCardComponent
+    CepCardComponent,
+    HistoricoConsultasComponent
   ],
   imports: [
     BrowserModule,

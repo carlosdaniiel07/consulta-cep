@@ -1,0 +1,42 @@
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="card-title">Histórico de consultas</h5>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let consulta of historico; index as i">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{consulta.data | date: 'dd/MM/yyyy hh:mm'}}</td>
+                    <td>{{consulta.cep}}</td>
+                    <td>
+                        <span *ngIf="!consulta.erro" class="text-success">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span *ngIf="consulta.erro" class="text-danger">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-secondary btn-sm" [disabled]="consulta.erro" (click)="reproduzirConsulta(consulta)">
+                            <i class="fas fa-play"></i> Reproduzir
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer text-muted">
+        O histórico de consultas é gravado no navegador, portanto, limpar os dados de navegação irá resultar na perda
+        dos dados
+    </div>
+</div>
