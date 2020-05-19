@@ -16,4 +16,4 @@ Outras dependências do projeto:
 
 ## Live Demo
 
-O projeto está hospedado no Heroku e pode ser acessado através deste [link](https://carlosdaniiel07.github.io/consulta-cep/)
+O projeto está hospedado no GitHub Pages e pode ser acessado através deste [link](https://carlosdaniiel07.github.io/consulta-cep/)
