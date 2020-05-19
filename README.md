@@ -2,6 +2,8 @@
 
 # ConsultaCep
 
+![Application image](https://imgur.com/3EYuh6F.png)
+
 A aplicação consiste em receber um CEP e retornar as suas informações através da API ViaCEP, tais como logradouro, cidade, estado etc. Este é um projeto somente para fins de aprendizagem. 
 
 ## Tecnologias
